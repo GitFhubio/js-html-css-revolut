@@ -57,3 +57,21 @@ button.btn.btn-dark {
   border: 1px solid black;
   cursor: pointer;
 }
+
+header {
+  width: 100%;
+  padding: 20px 0;
+  box-shadow: rgba(25, 28, 31, 0.04) 0px 8px 16px, rgba(25, 28, 31, 0.04) 0px -1px 0px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+}
+
+header nav > #nav-left,
+header nav > #nav-right {
+  display: flex;
+  align-items: center;
+}
