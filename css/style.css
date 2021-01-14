@@ -70,8 +70,61 @@ header nav {
   height: 60px;
 }
 
-header nav > #nav-left,
-header nav > #nav-right {
+header nav > #nav-left,header nav > #nav-right {
   display: flex;
   align-items: center;
+}
+#nav-left  a.logo {
+  display: inline-block;
+  width: 50px;
+  padding: 0;
+  margin-left: 20px;
+}
+
+#nav-left  a.logo  img {
+  width: 100%;
+}
+
+#nav-left a, #nav-right .dropdown-item > a {
+  display: none;
+}
+
+
+#nav-right ul {
+  height: 100%;
+}
+
+#nav-right > ul > li.dropdown-item {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+
+#nav-right > ul > li.dropdown-item > a {
+  height: 100%;
+  line-height: 60px;
+}
+
+#nav-right .dropdown-menu.active {
+  display: block;
+}
+
+#nav-right .dropdown-menu a {
+  display: inline-block;
+  padding: 15px 0 15px 10px;
+}
+
+.buttons {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+.buttons > .btn-light {
+  margin-right: 20px;
 }
