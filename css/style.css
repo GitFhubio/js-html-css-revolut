@@ -290,9 +290,6 @@ header nav > #nav-right {
 
 /* Breakpoint Small */
 @media screen and (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
 
   #nav-left > a.logo {
     margin-left: 0;
@@ -307,11 +304,17 @@ header nav > #nav-right {
   margin-left: 15px;
   display: none;
 }
-/* regole query container */
+/* media query container documentazione bootstrap */
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
  @media screen and (min-width: 768px) {
   .container {
     max-width: 720px;
   }
+}
  @media screen and (min-width: 992px) {
   .container {
     max-width: 960px;
@@ -322,14 +325,14 @@ header nav > #nav-right {
     max-width: 1140px;
   }
 }
-/* Breakpoint Burger menu 1080px */
+/* Burger menu 1080px */
 @media screen and (min-width: 1080px) {
   #nav-left a,
   #nav-right .dropdown-item > a {
     display: inline-block;
   }
 
-  #nav-right .burger-menu-icon > i {
+  #nav-right .burger-menu-icon > i,.buttons,  #hamburger-menu.active  {
     display: none;
   }
 
@@ -337,11 +340,4 @@ header nav > #nav-right {
     display: inline-block;
   }
 
-  #hamburger-menu.active {
-    display: none;
-  }
-
-  .buttons {
-    display: none;
-  }
 }
