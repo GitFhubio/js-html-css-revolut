@@ -306,21 +306,21 @@ header nav > #nav-right {
   margin-left: 15px;
   display: none;
 }
-
-/* Breakpoint medium */
-@media screen and (min-width: 768px) {
+/* regole query container */
+ @media screen and (min-width: 768px) {
   .container {
     max-width: 720px;
   }
-}
-
-/* Breakpoint  lg */
-@media screen and (min-width: 992px) {
+ @media screen and (min-width: 992px) {
   .container {
     max-width: 960px;
   }
 }
-
+ @media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
 /* Breakpoint Burger menu 1080px */
 @media screen and (min-width: 1080px) {
   #nav-left a,
@@ -342,12 +342,5 @@ header nav > #nav-right {
 
   .buttons {
     display: none;
-  }
-}
-
-/* Breakpoint  lg */
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
   }
 }
