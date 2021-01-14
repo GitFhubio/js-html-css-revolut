@@ -270,6 +270,7 @@ header nav > #nav-right {
   z-index: 1;
 }
 
+/* questi sono da mobile tablet in fondo,poi li tolgo desktop */
 .buttons {
   width: 100%;
   padding: 15px 0;
