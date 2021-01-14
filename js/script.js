@@ -17,7 +17,7 @@ $(document).ready(function() {
     //   });
     //
 
-// il click fa un pò brutto anche se ho messo di chiudere tutti i drop aperti prima di aprirne uno nuovo,proprio a livello di esperienza visitatore penso, passo a mouseenter mouseleave
+// Il click fa un pò brutto anche se ho messo l'opzione per chiudere tutti i drop aperti prima di aprirne uno nuovo,proprio a livello di esperienza visitatore penso, passo a mouseenter mouseleave
 
     $('.dropdown-item').mouseenter(function() {
         var sottomenu = $(this).find('.dropdown-menu');
@@ -32,7 +32,7 @@ $(document).ready(function() {
 
         });
 
-// Per spegnere e accendere l'hamburger menu
+// Per aprire chiudere l'hamburger menu(jquery mobile+++?)
       $('.burger-menu-icon').click(function() {
         $('#hamburger-menu').addClass('active');
       });
