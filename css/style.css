@@ -87,6 +87,7 @@ header nav > #nav-right {
 
 #nav-left > a.logo {
   display: inline-block;
+  /* è x vederlo anche da mobile quando faccio display none a nav left da mobile */
   width: 50px;
   padding: 0;
   margin-left: 20px;
