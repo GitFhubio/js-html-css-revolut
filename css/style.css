@@ -61,6 +61,7 @@ button.btn.btn-dark {
 header {
   width: 100%;
   padding: 20px 0;
+  box-shadow: rgba(25, 28, 31, 0.04) 0px 8px 16px, rgba(25, 28, 31, 0.04) 0px -1px 0px;
 }
 
 header nav {
@@ -69,25 +70,41 @@ header nav {
   height: 60px;
 }
 
-header nav > #nav-left,header nav > #nav-right {
+header nav > #nav-left,
+header nav > #nav-right {
   display: flex;
   align-items: center;
 }
-#nav-left  a.logo {
+
+#nav-left > a.logo {
   display: inline-block;
   width: 50px;
   padding: 0;
   margin-left: 20px;
 }
 
-#nav-left  a.logo  img {
+#nav-left > a.logo > img {
   width: 100%;
 }
 
-#nav-left a, #nav-right .dropdown-item > a {
+#nav-left a,
+#nav-right .dropdown-item > a {
+  padding: 0 18px;
   display: none;
 }
 
+#nav-left a:hover,
+#nav-right .dropdown-item > a:hover,
+#nav-right .dropdown-menu a:hover {
+  color: black;
+  transition: color 0.25s;
+}
+
+#nav-right .burger-menu-icon > i {
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+}
 
 #nav-right ul {
   height: 100%;
@@ -97,6 +114,11 @@ header nav > #nav-left,header nav > #nav-right {
   display: inline-block;
   position: relative;
   height: 100%;
+}
+
+#nav-right > ul > li.dropdown-item > a {
+  height: 100%;
+  line-height: 60px;
 }
 
 #nav-right > ul > li > .dropdown-menu {
@@ -109,12 +131,8 @@ header nav > #nav-left,header nav > #nav-right {
   border: 1px solid #fff;
   border-radius: 10px;
   color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
   display: none;
-}
-
-#nav-right > ul > li.dropdown-item > a {
-  height: 100%;
-  line-height: 60px;
 }
 
 #nav-right .dropdown-menu.active {
@@ -125,7 +143,13 @@ header nav > #nav-left,header nav > #nav-right {
   display: inline-block;
   padding: 15px 0 15px 10px;
 }
-/* Hamburger menu */
+
+#nav-right > ul > li > #features {
+  width: 1000px;
+  left: 35%;
+  transform: translateX(-35%);
+}
+
 #hamburger-menu {
   position: absolute;
   top: 0;
@@ -134,7 +158,7 @@ header nav > #nav-left,header nav > #nav-right {
   height: 100%;
   min-width: 100vw;
   min-height: 100vh;
-  background-color: white;
+  background-color:#fff;
   padding: 40px;
   display: none;
 }
@@ -142,7 +166,7 @@ header nav > #nav-left,header nav > #nav-right {
 #hamburger-menu > .burger-menu-top {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgb(232, 235, 239);
   padding-bottom: 35px;
 }
 
@@ -153,7 +177,7 @@ header nav > #nav-left,header nav > #nav-right {
 
 .burger-menu-top > .burger-top-right > i {
   font-size: 20px;
-  color: black;
+  color: rgb(25, 28, 31);
   cursor: pointer;
 }
 
@@ -166,7 +190,7 @@ header nav > #nav-left,header nav > #nav-right {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 30px;
-  color: #ccc);
+  color: #ccc;
 }
 
 .burger-menu-bottom > ul > li > a > span {
@@ -178,9 +202,15 @@ header nav > #nav-left,header nav > #nav-right {
 }
 
 #hamburger-menu a:hover {
-  color: black;
+  color: rgb(25, 28, 31);
   transition: color 0.25s;
 }
+
+#hamburger-menu.active {
+  display: block;
+  z-index: 1;
+}
+
 
 #features::after {
   content: '';
@@ -204,7 +234,7 @@ header nav > #nav-left,header nav > #nav-right {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: rgb(206, 213, 219);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -222,9 +252,7 @@ header nav > #nav-left,header nav > #nav-right {
 
 #features span {
   color: blue;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 10px;
   position: relative;
   bottom: 10px;
 }
@@ -237,6 +265,7 @@ header nav > #nav-left,header nav > #nav-right {
   width: 100%;
   padding: 15px 0;
   background-color: #fff;
+  box-shadow: rgba(25, 28, 31, 0.04) 0px -4px 8px, rgba(25, 28, 31, 0.04) 0px -1px 0px;
   display: flex;
   justify-content: center;
   position: absolute;
@@ -249,7 +278,7 @@ header nav > #nav-left,header nav > #nav-right {
 }
 
 
-/* Breakpoint Small 576px sm */
+/* Breakpoint Small */
 @media screen and (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -264,14 +293,19 @@ header nav > #nav-left,header nav > #nav-right {
   }
 }
 
-/* Breakpoint Medium 768px md */
+#nav-right > .btn {
+  margin-left: 15px;
+  display: none;
+}
+
+/* Breakpoint medium */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 720px;
   }
 }
 
-/* Breakpoint Large 992px lg */
+/* Breakpoint  lg */
 @media screen and (min-width: 992px) {
   .container {
     max-width: 960px;
@@ -302,7 +336,7 @@ header nav > #nav-left,header nav > #nav-right {
   }
 }
 
-/* Breakpoint Extra Large 1200px lg */
+/* Breakpoint  lg */
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1140px;

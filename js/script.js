@@ -19,3 +19,11 @@ $(document).ready(function() {
 
 
 });
+
+$('.burger-menu-icon').click(function() {
+  $('#hamburger-menu').addClass('active');
+});
+$('i.fas.fa-times').click(function() {
+  $('#hamburger-menu').removeClass('active');
+});
+});
