@@ -236,12 +236,6 @@ header nav > #nav-left,header nav > #nav-right {
   margin-right: 20px;
 }
 
-/* Breakpoint Medium 768px md */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
 
 /* Breakpoint Small 576px sm */
 @media screen and (min-width: 576px) {
@@ -279,10 +273,16 @@ header nav > #nav-left,header nav > #nav-right {
     display: inline-block;
   }
 
+  #nav-right .burger-menu-icon > i {
+    display: none;
   }
 
   #nav-right > .btn {
     display: inline-block;
+  }
+
+  #hamburger-menu.active {
+    display: none;
   }
 
   .buttons {
@@ -290,6 +290,7 @@ header nav > #nav-left,header nav > #nav-right {
   }
 }
 
+/* Breakpoint Extra Large 1200px lg */
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1140px;
