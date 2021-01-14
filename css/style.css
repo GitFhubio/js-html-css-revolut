@@ -61,7 +61,6 @@ button.btn.btn-dark {
 header {
   width: 100%;
   padding: 20px 0;
-  box-shadow: rgba(25, 28, 31, 0.04) 0px 8px 16px, rgba(25, 28, 31, 0.04) 0px -1px 0px;
 }
 
 header nav {
@@ -98,6 +97,19 @@ header nav > #nav-left,header nav > #nav-right {
   display: inline-block;
   position: relative;
   height: 100%;
+}
+
+#nav-right > ul > li > .dropdown-menu {
+  position: absolute;
+  top: 58px;
+  left: 0;
+  width: 200px;
+  padding: 15px 0 15px 5px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
 }
 
 #nav-right > ul > li.dropdown-item > a {
