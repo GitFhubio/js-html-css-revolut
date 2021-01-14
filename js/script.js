@@ -14,8 +14,12 @@ $(document).ready(function() {
             $('.dropdown-menu').hide();
             sottomenu.show();
         }
-
-    });
-
+      });
+      $('.burger-menu-icon').click(function() {
+        $('#hamburger-menu').addClass('active');
+      });
+      $('i.fas.fa-times').click(function() {
+        $('#hamburger-menu').removeClass('active');
+      });
 
 });
